@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --maintext-color: rgb(218, 218, 218);
+  --headertext-color: black;
+  --todos-bg: rgb(38, 38, 38);
+  --todos-bg-hover: rgb(47, 47, 47);
+  --todo-text-color: rgb(174, 174, 174);
+  --form-color: rgb(48, 48, 48);
+  --btn-color: rgb(255, 0, 98);
+  --btn-active-color: rgba(255, 0, 98, 0.835);
+  --shadow-card: 6px 6px 15px rgba(0, 0, 0, 0.3),
+    -5px -5px 12px rgba(117, 108, 147, 0.1);
+
+  --font-family: "Almarai", "Segoe UI", sans-serif;
+}
+body {
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  color: var(--text-color);
+  background-image: linear-gradient(
+    43deg,
+    #b8c1ee 0%,
+    #f0b9ec 46%,
+    #fdefd3 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header {
+  width: 100vw;
+  text-align: center;
+  padding-top: 5%;
+  color: var(--headertext-color);
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  color: var(--maintext-color);
+}
+.container {
+  min-height: 70vh;
+  max-height: 70vh;
+  width: 50vw;
+  margin-bottom: 3rem;
+  margin-top: 2%;
+}
+@media (max-width: 850px) {
+  .container {
+    width: 75vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 90vw;
+  }
+}
+.todos {
+  background-color: var(--todos-bg);
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  box-shadow: var(--shadow-card);
+  border-radius: 7px;
+}
+.todos-form {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--form-color);
+  border-radius: 5px 5px 0 0;
+  padding: 2%;
+  height: 20%;
+  width: 100%;
+}
+.todos-form_icon {
+  flex-basis: 10%;
+  padding-top: 2%;
+}
+.todos-form_icon:hover {
+  cursor: pointer;
+}
+.todos-form_icon.active {
+  color: rgb(0, 186, 0);
+}
+.todos-form_form {
+  height: 3rem;
+  flex-basis: 80%;
+}
+.todos-form_form input {
+  font-size: large;
+  min-height: 100%;
+  width: 100%;
+  background-color: var(--todos-bg);
+  padding: 2%;
+  border: none;
+  color: var(--maintext-color);
+  outline: none;
+}
+.todos-form_submit {
+  flex-basis: 20%;
+}
+.todos-form_submit button {
+  height: 100%;
+  width: 100%;
+  background-color: var(--btn-color);
+  border: none;
+  color: var(--maintext-color);
+  font-size: large;
+}
+.todos-form_submit button:hover {
+  cursor: pointer;
+}
+.todos-form_submit button:active {
+  background-color: var(--btn-active-color);
+}
+.todos-form_submit button:disabled {
+  cursor: not-allowed;
+  background-color: rgba(255, 104, 162, 0.835);
+}
+.todos-form_submit button:disabled:hover {
+  cursor: not-allowed;
+  background-color: rgba(255, 104, 162, 0.835);
+}
+.todos-list {
+  padding: 1%;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.todos-todo {
+  display: flex;
+  justify-content: flex-start;
+  min-width: 100%;
+  min-height: 10%;
+  padding: 3%;
+  padding-left: 1%;
+  transition: all 0.3s;
+  
+}
+.todos-todo:hover {
+  background-color: var(--todos-bg-hover);
+}
+.todos-todo_icon {
+  flex-basis: 10%;
+}
+.todos-todo_text {
+  min-width: 85%;
+  padding-right: 2%;
+  color: var(--todo-text-color);
+}
+.todos-todo_icon:hover {
+  cursor: pointer;
+}
+.done .todos-todo_icon {
+  color: rgb(0, 186, 0);
+}
+.done .todos-todo_text {
+  text-decoration: line-through;
+}
+.todos-todo_cta {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25%;
+  transition: all 0.3s;
+}
+.todos-todo:hover .todos-todo_cta {
+  opacity: 1;
+}
+.hidden {
+  display: none;
+}
+.todos-todo_cta-edit:hover {
+  color: rgb(255, 187, 0);
+  cursor: pointer;
+}
+.todos-todo_cta-delete:hover {
+  color: red;
+  cursor: pointer;
+}
+.no-todos {
+  text-align: center;
+  font-weight: normal;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--text-color);
+  opacity: 0.75;
+}
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background: var(--form-color); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--btn-color);
+}
+
+
