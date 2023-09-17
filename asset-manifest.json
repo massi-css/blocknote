@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/blocknote/static/css/main.e55fc482.css",
+    "main.js": "/blocknote/static/js/main.19886ed5.js",
+    "index.html": "/blocknote/index.html",
+    "main.e55fc482.css.map": "/blocknote/static/css/main.e55fc482.css.map",
+    "main.19886ed5.js.map": "/blocknote/static/js/main.19886ed5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e55fc482.css",
+    "static/js/main.19886ed5.js"
+  ]
+}
