@@ -72,6 +72,7 @@ main {
   border-radius: 5%;
   box-shadow: var(--shadow-card);
   border-radius: 7px;
+  overflow-x: hidden;
 }
 .todos-form {
   display: flex;
